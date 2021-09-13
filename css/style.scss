@@ -425,6 +425,7 @@ header .header-flex.open .mask {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    object-fit: cover;
     color: $header-Color;
 
     .title-width {
