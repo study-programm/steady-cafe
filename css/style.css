@@ -364,6 +364,8 @@ header .header-flex.open .mask {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   color: #ffffff;
 }
 .blog-wrapper .title-width {

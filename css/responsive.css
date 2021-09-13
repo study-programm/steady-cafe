@@ -260,6 +260,10 @@
 
     /*ブログページ*/
 
+    .blog-wrapper{
+        padding-top:50px;
+    }
+
     .blog-wrapper .container .blog-flex {
         display: block;
     }
