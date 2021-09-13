@@ -1,0 +1,296 @@
+/*タブレット画面*/
+@media screen and (max-width:1000px) {
+
+
+    /*ヘッダー*/
+    header .header-flex nav ul li a {
+        font-size: 14px;
+    }
+
+    /*アバウトページ*/
+
+    .about-wrapper .container .about-flex {
+        display: block;
+        width:80%;
+        margin: 0 auto;
+    }
+
+    .about-wrapper .container .about-flex .about-left {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .about-wrapper .container .about-flex .about-right {
+        width: 70%;
+        margin: 0 auto;
+        font-size: 14px;
+        padding-top: 50px;
+        line-height: 30px;
+    }
+
+
+
+    /*メニューページ*/
+    .menu-wrapper .container .menu-flex-wrap {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .menu-wrapper .container .menu-flex-wrap li {
+        width: 45%;
+    }
+
+    /*アクセスページ*/
+    .access-wrapper .container .access-flex {
+        display: block;
+    }
+
+    .access-wrapper .container .access-flex .access-left {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .access-wrapper .container .access-flex .access-left p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .access-wrapper .container .access-flex .access-right {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    .googlemap {
+        height: 350px;
+    }
+
+    /*ブログページ*/
+    .blog-wrapper .container .blog-flex {
+        display: block;
+    }
+
+    .blog-wrapper .container .blog-flex li {
+        width: 50%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    .blog-wrapper .container .blog-flex li a{
+        opacity: 1;
+    }
+
+    /*フッター*/
+    footer .footer p {
+        font-size: 12px;
+    }
+
+
+}
+
+/*スマホ画面*/
+
+@media screen and (max-width:575px) {
+
+    /*トップの画像部分*/
+
+    #scrollTop {
+        width: 80px;
+        height: 80px;
+    }
+
+    #scrollTop span {
+        font-size: 14px;
+    }
+
+    /*ヘッダー部分*/
+
+    header .header-flex {
+        padding-top: initial;
+        padding-right: 20px;
+    }
+
+    header .container .header-flex .toggle-btn {
+        display: block;
+    }
+
+    header .header-flex nav ul {
+        display: block;
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        z-index: 20;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+
+    header .header-flex.open nav ul {
+        opacity: 1;
+    }
+
+
+    header .header-flex nav ul li {
+        margin:50px 0;
+        display: none;
+    }
+
+    header .header-flex.open nav ul li a{
+        font-size: 16px;
+    }
+
+    header .header-flex.open nav ul li {
+        display: block;
+    }
+
+    header .header-flex.open nav ul li:hover {
+        cursor: pointer;
+    }
+
+
+    /*スライダー画像周り*/
+    .slider .slider-show li img {
+        height: 350px;
+    }
+
+    .slider .slider-show {
+        position: relative;
+    }
+
+    .slide-title h2 {
+        top: 20% !important;
+        font-size: 20px !important;
+    }
+
+    /*アバウトページ*/
+
+    .about-wrapper .container .about-flex {
+        display: block;
+    }
+
+    .about-wrapper .container .about-left {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .about-wrapper .container .about-right {
+        width: 75%;
+        margin: 0 auto;
+        font-size: 12px;
+        padding-top: 50px;
+        line-height: 30px;
+    }
+
+    .about-wrapper .container .title-width .section-title {
+        font-size: 45px;
+    }
+
+    .about-wrapper .container .title-width p {
+        font-size: 14px;
+    }
+
+    /*メニューページ*/
+
+    .menu-wrapper .container .title-width .section-title {
+        font-size: 45px;
+    }
+
+    .menu-wrapper .container .title-width p {
+        font-size: 14px;
+    }
+
+    .menu-wrapper .container .menu-flex-wrap {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .menu-wrapper .container .menu-flex-wrap li {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .menu-wrapper .container .menu-flex-wrap li p {
+        font-size: 12px;
+    }
+
+    .menu-wrapper .container .menu-flex-wrap .menu-pdb {
+        padding-bottom: initial;
+    }
+
+    .menu-wrapper .container .disabled {
+        width: 150px;
+        font-size: 14px;
+    }
+
+
+    /*アクセスページ*/
+
+    .access-wrapper .container .title-width .section-title {
+        font-size: 45px;
+    }
+
+    .access-wrapper .container .title-width p {
+        font-size: 14px;
+    }
+
+    .access-wrapper .container .access-flex {
+        display: block;
+    }
+
+    .access-wrapper .container .access-flex .access-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .access-wrapper .container .access-flex .access-left p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .access-wrapper .container .access-flex .access-right {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    .googlemap {
+        height: 280px;
+    }
+
+    /*ブログページ*/
+
+    .blog-wrapper .container .blog-flex {
+        display: block;
+    }
+
+    .blog-wrapper .container .blog-flex li {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+
+    .blog-wrapper .container .blog-flex li .blog-title {
+        margin-top: 20px;
+    }
+
+    .blog-wrapper .container .blog-flex li a{
+        opacity: 1;
+    }
+
+    /*ブログのタイトル見出し部分。→分かりにくいとおもうのでメモ*/
+    .blog-wrapper .container .blog-flex li p {
+        font-size: 14px;
+    }
+
+    .blog-wrapper .container .blog-flex li .blog-text p {
+        font-size: 12px;
+    }
+
+    /*フッターページ*/
+
+    footer .footer p {
+        font-size: 12px;
+    }
+
+}
