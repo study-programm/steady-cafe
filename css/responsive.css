@@ -11,6 +11,8 @@
 
     .about-wrapper .container .about-flex {
         display: block;
+        width:80%;
+        margin: 0 auto;
     }
 
     .about-wrapper .container .about-flex .about-left {
@@ -44,13 +46,13 @@
     }
 
     .access-wrapper .container .access-flex .access-left {
-        width: 70%;
+        width: 60%;
         margin: 0 auto;
     }
 
     .access-wrapper .container .access-flex .access-left p {
         font-size: 14px;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
     }
 
     .access-wrapper .container .access-flex .access-right {
@@ -72,6 +74,10 @@
         width: 50%;
         margin: 0 auto;
         padding-bottom: 50px;
+    }
+
+    .blog-wrapper .container .blog-flex li a{
+        opacity: 1;
     }
 
     /*フッター*/
@@ -266,6 +272,10 @@
 
     .blog-wrapper .container .blog-flex li .blog-title {
         margin-top: 20px;
+    }
+
+    .blog-wrapper .container .blog-flex li a{
+        opacity: 1;
     }
 
     /*ブログのタイトル見出し部分。→分かりにくいとおもうのでメモ*/

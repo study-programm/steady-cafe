@@ -227,7 +227,7 @@ header .header-flex.open .mask {
 .about-wrapper {
 
     //セクション区切りで100離す
-    padding: 100px 0 50px 0;
+    padding: 100px 0;
 
     .title-width {
         text-align: center;
@@ -271,7 +271,7 @@ header .header-flex.open .mask {
 }
 
 .menu-wrapper {
-    padding: 100px 0 50px 0;
+    padding: 100px 0;
     background-image: url("../img/menu-bgi.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -367,8 +367,7 @@ header .header-flex.open .mask {
 /*アクセスのCSS*/
 .access-wrapper {
 
-    padding: 100px 0 50px 0;
-
+    padding: 100px 0;
 
     .title-width {
         text-align: center;
@@ -421,8 +420,12 @@ header .header-flex.open .mask {
 //ブログ一覧
 .blog-wrapper {
 
-    padding: 100px 0 50px 0;
-
+    padding: 100px 0;
+    background-image: url("../img/blog-bgi.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: $header-Color;
 
     .title-width {
         text-align: center;
@@ -453,12 +456,15 @@ header .header-flex.open .mask {
     li {
         width: 32%;
 
+
         a {
             transition: all 0.5s;
+            color: $header-Color;
+            opacity:0.8;
         }
 
         a:hover {
-            color: $main-Color;
+            opacity:1;
             transition: all 0.5s;
         }
 
@@ -479,6 +485,7 @@ header .header-flex.open .mask {
 
         p {
             text-align: center;
+            
         }
 
         img {
