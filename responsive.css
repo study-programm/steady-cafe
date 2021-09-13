@@ -11,7 +11,7 @@
 
     .about-wrapper .container .about-flex {
         display: block;
-        width:80%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -76,7 +76,7 @@
         padding-bottom: 50px;
     }
 
-    .blog-wrapper .container .blog-flex li a{
+    .blog-wrapper .container .blog-flex li a {
         opacity: 1;
     }
 
@@ -130,11 +130,11 @@
 
 
     header .header-flex nav ul li {
-        margin:50px 0;
+        margin: 50px 0;
         display: none;
     }
 
-    header .header-flex.open nav ul li a{
+    header .header-flex.open nav ul li a {
         font-size: 16px;
     }
 
@@ -260,6 +260,12 @@
 
     /*ブログページ*/
 
+    .blog-wrapper::before {
+        content: '';
+        display: block;
+        padding-top: 50%;
+    }
+
     .blog-wrapper .container .blog-flex {
         display: block;
     }
@@ -274,7 +280,7 @@
         margin-top: 20px;
     }
 
-    .blog-wrapper .container .blog-flex li a{
+    .blog-wrapper .container .blog-flex li a {
         opacity: 1;
     }
 

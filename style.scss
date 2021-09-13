@@ -426,11 +426,7 @@ header .header-flex.open .mask {
     background-size: cover;
     color: $header-Color;
     width:100%;
-    
-
-    &::before{
-        padding-top:50%;
-    }
+    height:700px;
     
 
     .title-width {

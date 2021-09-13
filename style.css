@@ -367,9 +367,6 @@ header .header-flex.open .mask {
   color: #ffffff;
   width: 100%;
 }
-.blog-wrapper::before {
-  padding-top: 50%;
-}
 .blog-wrapper .title-width {
   text-align: center;
   padding-bottom: 50px;
