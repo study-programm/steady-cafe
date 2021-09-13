@@ -1,0 +1,522 @@
+/*------------column--------------*/
+
+$main-Color:#835820;
+$header-Color:#ffffff;
+$dots-Color:#E1CCAB;
+$tea-Color:#f5deb3;
+$milk-tea-Color:#e8d3ca;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    color: $main-Color;
+    font-family: 'Caveat', cursive;
+    letter-spacing: 2px;
+}
+
+span {
+    cursor: pointer;
+}
+
+
+
+/*ヘッダーの背景を変えるCSS　※高さ計測して出す仕組みは別途JSで記入。*/
+.changes {
+    background: $milk-tea-Color;
+    transition: all 1s;
+}
+
+/*トップページに戻るボタンの色付け*/
+
+
+#scrollTop {
+    display: inline-block;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 85px;
+    height: 85px;
+    border-radius: 25%;
+    background: $milk-tea-Color;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    color: $header-Color;
+
+
+    span {
+        position: relative;
+        top: 40%
+    }
+
+    &:hover {
+        color: $main-Color;
+        transition: all 0.5s;
+    }
+
+}
+
+/*一定の高さを超えるとヘッダーの色を変えるようにクラスを追加する*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header {
+    font-family: 'Caveat', cursive;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transition: all 1s;
+
+    h1 {
+        color: $header-Color;
+        font-size: 26px;
+    }
+
+
+    .header-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            padding-left: 20px;
+        }
+
+        ul {
+            display: flex;
+
+
+            li {
+                padding: 0 20px;
+
+                a {
+                    color: $header-Color;
+                    font-size: 18px;
+
+                    &:hover {
+
+                        color: $main-Color;
+                        opacity: 0.8;
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+
+
+        .toggle-btn {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            z-index: 20;
+            display: none;
+
+            span {
+                width: 30px;
+                height: 2px;
+                display: block;
+                background: $header-Color;
+                position: absolute;
+                transition: all 0.5s;
+            }
+
+            span:nth-child(1) {
+                top: 4px;
+            }
+
+            span:nth-child(2) {
+                top: 14px;
+            }
+
+            span:nth-child(3) {
+                bottom: 4px;
+            }
+
+        }
+
+
+
+        .mask {
+            display: none;
+            transition: all 0.5s;
+        }
+
+    }
+
+
+}
+
+//open処理は別にさばく　open一覧部分　
+
+.open .toggle-btn span {
+    transition: all 0.5s;
+}
+
+.open .toggle-btn span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+}
+
+.open .toggle-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+}
+
+
+header .header-flex.open .mask {
+    display: block;
+    transition: all 0.5s;
+    //カフェをイメージして全体をミルクティにイメージした色。
+    background-color: $milk-tea-Color;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+
+
+//open処理終わり　open一覧部分　
+
+//スライダー画像部分
+
+.slider-show {
+    position: relative;
+
+    //見栄えの強弱を意識して幅いっぱいに作る。
+    //高さは最大でもPCのファーストビューまで。
+    img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+    }
+
+}
+
+.slide-title h2 {
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: $header-Color;
+    line-height: 75px;
+    letter-spacing: 5px;
+    z-index: 110;
+    font-family: "MS mincho";
+}
+
+//アバウトページ
+
+.about-wrapper {
+
+    //セクション区切りで100離す
+    padding: 100px 0 50px 0;
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+        }
+
+        p {
+            font-family: 'Caveat', cursive;
+            margin-top: 10px;
+        }
+    }
+
+    .about-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-left {
+        width: 35%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .about-right {
+        width: 50%;
+        line-height: 28px;
+
+        .font-bold-steady {
+            font-family: 'Caveat', cursive;
+        }
+    }
+
+}
+
+.menu-wrapper {
+    padding: 100px 0 50px 0;
+    background-image: url("../img/menu-bgi.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+
+        }
+
+        p {
+            font-family: 'Caveat', cursive;
+            margin-top: 10px;
+        }
+
+    }
+
+    .menu-flex-wrap {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+
+        li {
+            width: 30%;
+            transition: all 0.5s;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, ), 0 2px 3px 0 rgba(0, 0, 0, .12);
+            transition: .3s;
+
+            &:hover {
+
+                color: #000;
+                transition: all 0.5s;
+                box-shadow: 0 15px 30px -5px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1);
+                transform: translateY(-4px);
+            }
+
+            &+p {
+                color: #000;
+            }
+
+
+
+            img {
+                border-radius: 50px;
+                width: 100%;
+                cursor: pointer;
+
+            }
+
+            p {
+                font-family: 'Caveat', cursive;
+                margin-top: 20px;
+            }
+
+        }
+    }
+
+
+    .disabled {
+        text-align: center;
+        padding: 20px 30px;
+        background: $milk-tea-Color;
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 25px;
+        color: $header-Color;
+        box-shadow: 0 5px #faf0e6;
+        transform: translateY(-6px);
+        cursor: pointer;
+
+        &:active {
+            position: relative;
+            box-shadow: 0 0px;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+/*アクセスのCSS*/
+.access-wrapper {
+
+    padding: 100px 0 50px 0;
+
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+
+
+        }
+
+        p {
+            font-family: 'Caveat', cursive;
+            margin-top: 10px;
+        }
+
+    }
+
+    .access-flex {
+        display: flex;
+        justify-content: space-between;
+
+        .access-left {
+            width: 50%;
+
+            p {
+                line-height: 34px;
+                border-bottom: 2px dotted $dots-Color;
+                padding-bottom: 5px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .access-right {
+            width: 45%;
+
+            .googlemap {
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+
+    }
+
+
+}
+
+//ブログ一覧
+.blog-wrapper {
+
+    padding: 100px 0 50px 0;
+
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+
+        }
+
+
+        p {
+            font-family: 'Caveat', cursive;
+            margin-top: 20px;
+        }
+
+    }
+
+
+
+    .blog-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        width: 32%;
+
+        a {
+            transition: all 0.5s;
+        }
+
+        a:hover {
+            color: $main-Color;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .blog-date {
+            margin-top: 15px;
+            font-size: 17px;
+            letter-spacing: 3.5px;
+        }
+
+        .blog-title {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: 250px;
+
+        }
+
+        .blog-text {
+
+            margin-top: 30px;
+
+            p {
+                text-align: left;
+                letter-spacing: 2px;
+                line-height: 24px;
+                font-size: 12px;
+            }
+        }
+
+    }
+
+
+}
+
+
+.footer {
+
+    padding-bottom: 30px;
+    background: $milk-tea-Color;
+
+    p {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 14px;
+
+        span {
+            font-family: sans-serif;
+        }
+    }
+}
