@@ -364,10 +364,11 @@ header .header-flex.open .mask {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover;
   color: #ffffff;
   width: 100%;
+}
+.blog-wrapper::before {
+  padding-top: 50%;
 }
 .blog-wrapper .title-width {
   text-align: center;

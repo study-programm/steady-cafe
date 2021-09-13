@@ -419,15 +419,18 @@ header .header-flex.open .mask {
 
 //ブログ一覧
 .blog-wrapper {
-
     padding: 100px 0;
     background-image: url("../img/blog-bgi.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    object-fit: cover;
     color: $header-Color;
     width:100%;
+    
+
+    &::before{
+        padding-top:50%;
+    }
     
 
     .title-width {
