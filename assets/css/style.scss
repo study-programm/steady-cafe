@@ -1,0 +1,543 @@
+/*------------column--------------*/
+
+$main-color:#835820;
+$header-color:#ffffff;
+$dots-color:#E1CCAB;
+$tea-color:#f5deb3;
+$milk-tea-color:#e8d3ca;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    color: $main-color;
+    font-family: 'Caveat', cursive;
+    letter-spacing: 2px;
+}
+
+span {
+    cursor: pointer;
+}
+
+
+/*ヘッダーの背景を変えるCSS　※高さ計測して出す仕組みは別途JSで記入。*/
+.changes {
+    background: $milk-tea-color;
+    transition: all 1s;
+}
+
+/*トップページに戻るボタンの色付け*/
+
+
+#scrollTop {
+    display: inline-block;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 85px;
+    height: 85px;
+    border-radius: 25%;
+    background: $milk-tea-color;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    color: $header-color;
+
+    .scroll-btn {
+        position: relative;
+        top: 40%
+    }
+
+    &:hover {
+        color: $main-color;
+        transition: all 0.5s;
+    }
+
+}
+
+/*一定の高さを超えるとヘッダーの色を変えるようにクラスを追加する*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+header {
+    font-family: 'Caveat', cursive;
+    height: 80px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transition: all 1s;
+
+    .title-logo {
+        color: $header-color;
+        font-size: 26px;
+    }
+
+    .header-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-logo {
+            padding-left: 20px;
+        }
+
+        .nav-ul {
+            display: flex;
+
+
+            .nav-li {
+                padding: 0 20px;
+
+                .header-link {
+                    color: $header-color;
+                    font-size: 18px;
+
+                    &:hover {
+
+                        color: $main-color;
+                        opacity: 0.8;
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+
+
+        .toggle-btn {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            z-index: 20;
+            display: none;
+
+            .hamburger {
+                width: 30px;
+                height: 2px;
+                display: block;
+                background: $header-color;
+                position: absolute;
+                transition: all 0.5s;
+            }
+
+            .hamburger:nth-child(1) {
+                top: 4px;
+            }
+
+            .hamburger:nth-child(2) {
+                top: 14px;
+            }
+
+            .hamburger:nth-child(3) {
+                bottom: 4px;
+            }
+
+        }
+
+
+
+        .mask {
+            display: none;
+            transition: all 0.5s;
+        }
+
+    }
+
+
+}
+
+//open処理は別にさばく　open一覧部分　
+
+.open .toggle-btn .hamburger {
+    transition: all 0.5s;
+}
+
+.open .toggle-btn .hamburger:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+}
+
+.open .toggle-btn .hamburger:nth-child(2) {
+    opacity: 0;
+}
+
+.open .toggle-btn .hamburger:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+}
+
+
+header .header-flex.open .mask {
+    display: block;
+    transition: all 0.5s;
+    //カフェをイメージして全体をミルクティにイメージした色。
+    background-color: $milk-tea-color;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+
+
+//open処理終わり　open一覧部分　
+
+//スライダー画像部分
+
+.slider-show {
+    position: relative;
+
+    //見栄えの強弱を意識して幅いっぱいに作る。
+    //高さは最大でもPCのファーストビューまで。
+    .slide-img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+    }
+
+}
+
+.slide-title .slide-heading {
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: $header-color;
+    line-height: 75px;
+    letter-spacing: 5px;
+    z-index: 110;
+    font-family: "MS mincho";
+}
+
+//アバウトページ
+
+.about-wrapper {
+
+    //セクション区切りで100離す
+    padding: 100px 0;
+    background: $header-color;
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+        }
+
+        .section-sub-title {
+            font-family: 'Caveat', cursive;
+            margin-top: 10px;
+        }
+    }
+
+    .about-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-left {
+        width: 35%;
+
+        .about-img {
+            width: 100%;
+        }
+    }
+
+    .about-right {
+        width: 50%;
+        line-height: 28px;
+
+        .font-bold-steady {
+            font-family: 'Caveat', cursive;
+        }
+    }
+
+}
+
+.menu-wrapper {
+    padding: 100px 0;
+    color: $header-color;
+
+    &::before {
+        content: "";
+        display: block;
+        background-image: url("../img/menu-bgi.jpg");
+        position: fixed;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+
+        }
+
+        .section-sub-title {
+            font-family: 'Caveat', cursive;
+            margin-top: 10px;
+        }
+
+    }
+
+    .menu-flex-wrap {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+
+        .menu-flex-child {
+            width: 30%;
+            transition: all 0.5s;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, ), 0 2px 3px 0 rgba(0, 0, 0, .12);
+            transition: 0.3s;
+
+            &:hover {
+                transition: all 0.5s;
+                box-shadow: 0 15px 30px -5px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1);
+                transform: translateY(-4px);
+            }
+
+            .menu-link {
+                color: $header-color;
+
+                &:hover {
+                    color: #000;
+                    transition: all 0.3s;
+                }
+
+            }
+
+            .menu-link+.menu-text:hover {
+                color: #000;
+            }
+
+
+            .menu-img {
+                border-radius: 50px;
+                width: 100%;
+            }
+
+            .menu-text {
+                font-family: 'Caveat', cursive;
+                margin-top: 20px;
+            }
+
+        }
+    }
+
+
+    .disabled {
+        text-align: center;
+        padding: 20px 30px;
+        background: $milk-tea-color;
+        width: 200px;
+        margin: 0 auto;
+        border-radius: 25px;
+        color: $header-color;
+        box-shadow: 0 5px #faf0e6;
+        transform: translateY(-6px);
+        cursor: pointer;
+
+        &:active {
+            position: relative;
+            box-shadow: 0 0px;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+/*アクセスのCSS*/
+.access-wrapper {
+
+    padding: 100px 0;
+    background: $header-color;
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+        }
+
+        .section-sub-title {
+            font-family: 'Caveat', cursive;
+            margin-top: 10px;
+        }
+
+    }
+
+    .access-flex {
+        display: flex;
+        justify-content: space-between;
+
+        .access-left {
+            width: 50%;
+
+            .access-text {
+                line-height: 34px;
+                border-bottom: 2px dotted $dots-color;
+                padding-bottom: 5px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .access-right {
+            width: 45%;
+
+            .googlemap {
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+
+    }
+
+
+}
+
+//ブログ一覧
+.blog-wrapper {
+    padding: 100px 0;
+    color: $header-color;
+
+    &::before {
+        content: "";
+        display: block;
+        background-image: url("../img/blog-bgi.jpg");
+        position: fixed;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+    }
+
+    .title-width {
+        text-align: center;
+        padding-bottom: 50px;
+
+        .section-title {
+            font-size: 65px;
+            font-family: 'Allison', cursive;
+            letter-spacing: 3px;
+
+        }
+
+
+        .section-sub-title {
+            font-family: 'Caveat', cursive;
+            margin-top: 20px;
+        }
+
+    }
+
+    .blog-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .blog-child {
+        width: 32%;
+
+
+        .blog-link {
+            transition: all 0.5s;
+            color: $header-color;
+            opacity: 0.8;
+        }
+
+        .blog-link:hover {
+            opacity: 1;
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .blog-date {
+            margin-top: 15px;
+            font-size: 17px;
+            letter-spacing: 3.5px;
+            text-align: center;
+        }
+
+        .blog-title {
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 250px;
+
+        }
+
+        .blog-text {
+
+            margin-top: 30px;
+
+            .blog-sub-text {
+                text-align: left;
+                letter-spacing: 2px;
+                line-height: 24px;
+                font-size: 12px;
+            }
+        }
+
+    }
+
+
+}
+
+
+.footer {
+
+    padding-bottom: 30px;
+    background: $milk-tea-color;
+
+    .footer-title {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 14px;
+
+        .copy-right {
+            font-family: sans-serif;
+        }
+    }
+}
