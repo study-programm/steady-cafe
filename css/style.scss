@@ -279,10 +279,12 @@ header .header-flex.open .mask {
         display: block;
         background-image: url("../img/menu-bgi.jpg");
         position: fixed;
-        top: 0;
+        top:0;
         background-position: center;
         background-size: cover;
-        z-index: -1;
+        width:100%;
+        height:100%;
+        z-index:-1;
     }
 
     .title-width {
