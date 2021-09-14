@@ -260,10 +260,8 @@
 
     /*ブログページ*/
 
-    .blog-wrapper::before {
-        content: '';
-        display: block;
-        padding-top: 50%;
+    .blog-wrapper {
+        background-attachment: local;
     }
 
     .blog-wrapper .container .blog-flex {
