@@ -90,6 +90,12 @@
         font-size: 12px;
     }
 
+    .menu-wrapper,
+    blog-wrapper {
+        background-size: scroll;
+    }
+
+
 
 }
 
@@ -301,6 +307,11 @@
 
     footer .footer p {
         font-size: 12px;
+    }
+
+    .menu-wrapper,
+    blog-wrapper {
+        background-size: scroll;
     }
 
 }
