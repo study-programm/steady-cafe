@@ -13,10 +13,6 @@ body {
   letter-spacing: 2px;
 }
 
-span {
-  cursor: pointer;
-}
-
 /*ヘッダーの背景を変えるCSS　※高さ計測して出す仕組みは別途JSで記入。*/
 .changes {
   background: #e8d3ca;

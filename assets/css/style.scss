@@ -18,10 +18,6 @@ body {
     letter-spacing: 2px;
 }
 
-span {
-    cursor: pointer;
-}
-
 
 /*ヘッダーの背景を変えるCSS　※高さ計測して出す仕組みは別途JSで記入。*/
 .changes {
@@ -101,7 +97,6 @@ header {
                     font-size: 18px;
 
                     &:hover {
-
                         color: $main-color;
                         opacity: 0.8;
                         transition: all .5s;
@@ -117,6 +112,10 @@ header {
             position: relative;
             z-index: 20;
             display: none;
+            
+            &:hover{
+                cursor: pointer;
+            }
 
             .hamburger {
                 width: 30px;
