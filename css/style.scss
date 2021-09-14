@@ -272,11 +272,18 @@ header .header-flex.open .mask {
 
 .menu-wrapper {
     padding: 100px 0;
-    background-image: url("../img/menu-bgi.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
     color: white;
+
+    &::before {
+        content: "";
+        display: block;
+        background-image: url("../img/menu-bgi.jpg");
+        position: fixed;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
 
     .title-width {
         text-align: center;
@@ -425,7 +432,7 @@ header .header-flex.open .mask {
     background-position: center;
     background-size: cover;
     color: $header-Color;
-    
+
 
     .title-width {
         text-align: center;
@@ -460,11 +467,11 @@ header .header-flex.open .mask {
         a {
             transition: all 0.5s;
             color: $header-Color;
-            opacity:0.8;
+            opacity: 0.8;
         }
 
         a:hover {
-            opacity:1;
+            opacity: 1;
             transition: all 0.5s;
         }
 
@@ -485,7 +492,7 @@ header .header-flex.open .mask {
 
         p {
             text-align: center;
-            
+
         }
 
         img {

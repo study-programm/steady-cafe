@@ -231,11 +231,16 @@ header .header-flex.open .mask {
 
 .menu-wrapper {
   padding: 100px 0;
+  color: white;
+}
+.menu-wrapper::before {
+  content: "";
+  display: block;
   background-image: url("../img/menu-bgi.jpg");
-  background-attachment: fixed;
+  position: fixed;
+  top: 0;
   background-position: center;
   background-size: cover;
-  color: white;
 }
 .menu-wrapper .title-width {
   text-align: center;
