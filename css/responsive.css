@@ -33,7 +33,7 @@
     /*メニューページ*/
 
     .menu-wrapper {
-        background-image: url("../img/menu-sp-bgi.jpg") !important;
+        background-image: url("../img/menu-sp-bgi.jpg");
     }
 
     .menu-wrapper .container .menu-flex-wrap {
@@ -194,6 +194,11 @@
     }
 
     /*メニューページ*/
+
+    .menu-wrapper {
+        background-image: url("../img/menu-sp-bgi.jpg");
+    }
+
 
     .menu-wrapper .container .title-width .section-title {
         font-size: 45px;
