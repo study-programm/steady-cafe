@@ -3,7 +3,7 @@
 
 
     /*ヘッダー*/
-    header .header-flex nav ul li a {
+    header .header-flex .nav-g .nav-ul .nav-li .header-link {
         font-size: 14px;
     }
 
@@ -37,7 +37,7 @@
         margin: 0 auto;
     }
 
-    .menu-wrapper .container .menu-flex-wrap li {
+    .menu-wrapper .container .menu-flex-wrap .menu-flex-child {
         width: 45%;
     }
 
@@ -51,7 +51,7 @@
         margin: 0 auto;
     }
 
-    .access-wrapper .container .access-flex .access-left p {
+    .access-wrapper .container .access-flex .access-left .access-text {
         font-size: 14px;
         margin-bottom: 24px;
     }
@@ -71,18 +71,18 @@
         display: block;
     }
 
-    .blog-wrapper .container .blog-flex li {
+    .blog-wrapper .container .blog-flex .blog-child {
         width: 50%;
         margin: 0 auto;
         padding-bottom: 50px;
     }
 
-    .blog-wrapper .container .blog-flex li a {
+    .blog-wrapper .container .blog-flex .blog-child .blog-link {
         opacity: 1;
     }
 
     /*フッター*/
-    footer .footer p {
+    footer .footer .footer-title {
         font-size: 12px;
     }
 
@@ -100,7 +100,7 @@
         height: 80px;
     }
 
-    #scrollTop span {
+    #scrollTop .scroll-btn {
         font-size: 14px;
     }
 
@@ -115,7 +115,7 @@
         display: block;
     }
 
-    header .header-flex nav .nav-ul {
+    header .header-flex .nav-g .nav-ul {
         display: block;
         position: fixed;
         top: 30%;
@@ -125,31 +125,31 @@
         transition: all 0.5s;
     }
 
-    header .header-flex.open nav ul {
+    header .header-flex.open .nav-g .nav-ul {
         opacity: 1;
     }
 
 
-    header .header-flex nav ul li {
+    header .header-flex .nav-g .nav-ul .nav-li {
         margin: 50px 0;
         display: none;
     }
 
-    header .header-flex.open nav ul li a {
+    header .header-flex.open .nav-g .nav-ul .nav-li .header-link {
         font-size: 16px;
     }
 
-    header .header-flex.open nav ul li {
+    header .header-flex.open .nav-g .nav-ul .nav-li {
         display: block;
     }
 
-    header .header-flex.open nav ul li:hover {
+    header .header-flex.open .nav-g .nav-ul .nav-li:hover {
         cursor: pointer;
     }
 
 
     /*スライダー画像周り*/
-    .slider .slider-show li img {
+    .slider .slider-show .slider-child .slide-img {
         height: 350px;
     }
 
@@ -185,7 +185,7 @@
         font-size: 45px;
     }
 
-    .about-wrapper .container .title-width p {
+    .about-wrapper .container .title-width .section-sub-title {
         font-size: 14px;
     }
 
@@ -196,7 +196,7 @@
         font-size: 45px;
     }
 
-    .menu-wrapper .container .title-width p {
+    .menu-wrapper .container .title-width .section-sub-title {
         font-size: 14px;
     }
 
@@ -206,13 +206,13 @@
         margin: 0 auto;
     }
 
-    .menu-wrapper .container .menu-flex-wrap li {
+    .menu-wrapper .container .menu-flex-wrap .menu-flex-child {
         width: 100%;
         margin: 0 auto;
         margin-bottom: 50px;
     }
 
-    .menu-wrapper .container .menu-flex-wrap li p {
+    .menu-wrapper .container .menu-flex-wrap .menu-flex-child .menu-text {
         font-size: 12px;
     }
 
@@ -232,7 +232,7 @@
         font-size: 45px;
     }
 
-    .access-wrapper .container .title-width p {
+    .access-wrapper .container .title-width .section-sub-title {
         font-size: 14px;
     }
 
@@ -245,7 +245,7 @@
         margin: 0 auto;
     }
 
-    .access-wrapper .container .access-flex .access-left p {
+    .access-wrapper .container .access-flex .access-left .access-text {
         font-size: 12px;
         margin-bottom: 20px;
     }
@@ -266,22 +266,22 @@
         display: block;
     }
 
-    .blog-wrapper .container .blog-flex li {
+    .blog-wrapper .container .blog-flex .blog-child {
         width: 80%;
         margin: 0 auto;
         padding-bottom: 50px;
     }
 
-    .blog-wrapper .container .blog-flex li .blog-title {
+    .blog-wrapper .container .blog-flex .blog-child .blog-title {
         margin-top: 20px;
     }
 
-    .blog-wrapper .container .blog-flex li a {
+    .blog-wrapper .container .blog-flex .blog-child .blog-link {
         opacity: 1;
     }
 
     /*ブログのタイトル見出し部分。→分かりにくいとおもうのでメモ*/
-    .blog-wrapper .container .blog-flex li p {
+    .blog-wrapper .container .blog-flex .blog-child .blog-title {
         font-size: 14px;
     }
 
