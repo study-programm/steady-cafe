@@ -269,7 +269,7 @@ header .header-flex.open .mask {
 
 .menu-wrapper {
     padding: 100px 0;
-    color: $header-color;
+    color: $main-color;
 
     &::before {
         content: "";
@@ -326,7 +326,7 @@ header .header-flex.open .mask {
             }
 
             .menu-link {
-                color: $header-color;
+                color: $main-color;
 
                 &:hover {
                     color: #000;
@@ -430,7 +430,7 @@ header .header-flex.open .mask {
 //ブログ一覧
 .blog-wrapper {
     padding: 100px 0;
-    color: $header-color;
+    color: $main-color;
 
     &::before {
         content: "";
@@ -475,7 +475,7 @@ header .header-flex.open .mask {
 
         .blog-link {
             transition: all 0.5s;
-            color: $header-color;
+            color: $main-color;
             opacity: 0.8;
         }
 

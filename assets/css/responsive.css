@@ -285,13 +285,13 @@
         font-size: 14px;
     }
 
-    .blog-wrapper .container .blog-flex li .blog-text p {
+    .blog-wrapper .container .blog-flex .blog-child .blog-text .blog-sub-text {
         font-size: 12px;
     }
 
     /*フッターページ*/
 
-    footer .footer p {
+    footer .footer .footer-title {
         font-size: 12px;
     }
 

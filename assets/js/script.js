@@ -24,13 +24,8 @@ $(function(){
         
     });
     
-
-
-    
-    
 //パソコンでハンバーガークリックしてそのまま広げた時に
 //背景だけが残るのでそれの処理を距離を測って行う
-
 
     $(window).on('load resize', function(){
 
@@ -41,6 +36,7 @@ $(function(){
 
     //575px以上の時に背景含めたopen解除（戻ってみた時に通常の状態に見えるようにする）
     //それ未満は何もしない。
+    
     if($smart <= $win){
 
         //1:ハンバーガーが開いている部分を解除
@@ -51,6 +47,14 @@ $(function(){
     }else{
         ; //何もしない
         }
+    });
+
+    //ハンバーガーメニュー開いた後にクリックしたら背景とボタンを元に戻して見えるようにする
+
+    $(".header-link").click(function(){
+
+        $(".header-flex").removeClass("open");
+        
     });
 
 
@@ -79,7 +83,7 @@ $(function(){
 
     //ナビゲーションをクリックしたらゆっくりその場までスクロールする
 
-    $("header a").click(function(){
+    $(".header-link").click(function(){
 
         //リンクを取得させる
         let link=$(this).attr("href");
@@ -94,7 +98,7 @@ $(function(){
 
             scrollTop:position
 
-        },1000);
+        },1200);
 
 
     });
