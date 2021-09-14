@@ -32,10 +32,6 @@
 
     /*メニューページ*/
 
-    .menu-wrapper {
-        background-image: url("../img/menu-sp-bgi.jpg");
-    }
-
     .menu-wrapper .container .menu-flex-wrap {
         width: 80%;
         margin: 0 auto;
@@ -119,7 +115,7 @@
         display: block;
     }
 
-    header .header-flex nav ul {
+    header .header-flex nav .nav-ul {
         display: block;
         position: fixed;
         top: 30%;
@@ -161,9 +157,9 @@
         position: relative;
     }
 
-    .slide-title h2 {
-        top: 20% !important;
-        font-size: 20px !important;
+    .slide-title .slide-heading {
+        top: 20%;
+        font-size: 20px;
     }
 
     /*アバウトページ*/
@@ -194,10 +190,6 @@
     }
 
     /*メニューページ*/
-
-    .menu-wrapper {
-        background-image: url("../img/menu-sp-bgi.jpg");
-    }
 
 
     .menu-wrapper .container .title-width .section-title {
@@ -301,11 +293,6 @@
 
     footer .footer p {
         font-size: 12px;
-    }
-
-    .menu-wrapper,
-    blog-wrapper {
-        background-size: scroll;
     }
 
 }

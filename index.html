@@ -20,21 +20,21 @@
         <div class="container">
             　<div class="header-flex">
                 <a href="/">
-                    <h1><img src="img/logo.png" width="70" height="50" alt="自作アイコンになります"></h1>
+                    <h1 class="title-logo"><img src="img/logo.png" width="70" height="50" alt="自作アイコンになります"></h1>
                 </a>
 
                 <nav>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#access">Access</a></li>
-                        <li><a href="#blog">Blog</a></li>
+                    <ul class="nav-ul">
+                        <li class="nav-li"><a class="header-link" href="#about">About</a></li>
+                        <li class="nav-li"><a class="header-link" href="#menu">Menu</a></li>
+                        <li class="nav-li"><a class="header-link" href="#access">Access</a></li>
+                        <li class="nav-li"><a class="header-link" href="#blog">Blog</a></li>
                     </ul>
                 </nav>
                 <div class="toggle-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
                 </div>
                 <div class="mask">
                 </div>
@@ -44,29 +44,29 @@
     <!--スライダー画像を入れる部分にする------------------->
     <div class="slider">
         <ul class="slider-show">
-            <li><img src="img/slider1.jpg" alt="1枚目に表示される画像"> </li>
-            <li><img src="img/slider2.jpg" alt="2枚目に表示される画像"> </li>
-            <li><img src="img/slider3.jpg" alt="3枚目に表示される画像"> </li>
-            <li><img src="img/slider4.jpg" alt="4枚目に表示される画像"> </li>
+            <li><img class="slide-img" src="img/slider1.jpg" alt="1枚目に表示される画像"> </li>
+            <li><img class="slide-img" src="img/slider2.jpg" alt="2枚目に表示される画像"> </li>
+            <li><img class="slide-img" src="img/slider3.jpg" alt="3枚目に表示される画像"> </li>
+            <li><img class="slide-img" src="img/slider4.jpg" alt="4枚目に表示される画像"> </li>
         </ul>
     </div>
     <div class="slide-title">
-        <h2>心やすらぐ、一杯を。</h2>
+        <h2 class="slide-heading">心やすらぐ、一杯を。</h2>
     </div>
 
-    <a id="scrollTop" href="#"><span>TOP</span></a>
+    <a id="scrollTop" href="#"><span class="scroll-btn">TOP</span></a>
 
     <!--ここからアバウトページへ------------------->
     <section class="about-wrapper" id="about">
         <div class="container">
             <div class="title-width">
                 <h2 class="section-title">About</h2>
-                <p>steady cafeとは</p>
+                <p class="section-sub-title">steady cafeとは</p>
             </div>
 
             <div class="about-flex">
                 <div class="about-left">
-                    <img src="img/about-image.jpg" alt="コーヒーの画像です">
+                    <img class="about-img" src="img/about-image.jpg" alt="コーヒーの画像です">
                 </div>
 
                 <div class="about-right">
@@ -85,33 +85,45 @@
         <div class="container">
             <div class="title-width">
                 <h2 class="section-title">Menu</h2>
-                <p>メニュー表</p>
+                <p class="section-sub-title">メニュー表</p>
             </div>
 
             <ul class="menu-flex-wrap">
-                <li>
-                    <img src="img/menu-coffee.jpg" alt="コーヒーの画像です">
-                    <p>コーヒーの説明が入ります。</p>
+                <li class="menu-flex-child">
+                    <a href="/" class="menu-link">
+                        <img class="menu-img" src="img/menu-coffee.jpg" alt="コーヒーの画像です">
+                        <p class="menu-text">コーヒーの説明が入ります。</p>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/menu-hotdog.jpg" alt="チリドッグの画像です">
-                    <p>チリドッグの説明が入ります。</p>
+                <li class="menu-flex-child">
+                    <a href="/" class="menu-link">
+                        <img class="menu-img" src="img/menu-hotdog.jpg" alt="チリドッグの画像です">
+                        <p class="menu-text">チリドッグの説明が入ります。</p>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/menu-salmon.jpg" alt="サーモンの画像です">
-                    <p>サーモンの説明が入ります。</p>
+                <li class="menu-flex-child">
+                    <a href="/" class="menu-link">
+                        <img class="menu-img" src="img/menu-salmon.jpg" alt="サーモンの画像です">
+                        <p class="menu-text">サーモンの説明が入ります。</p>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/menu-cake.jpg" alt="チーズケーキの画像です">
-                    <p>ケーキの説明が入ります。</p>
+                <li class="menu-flex-child">
+                    <a href="/" class="menu-link">
+                        <img class="menu-img" src="img/menu-cake.jpg" alt="チーズケーキの画像です">
+                        <p class="menu-text">ケーキの説明が入ります。</p>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/menu-spa.jpg" alt="パスタの画像です">
-                    <p>スパゲッティの説明が入ります。</p>
+                <li class="menu-flex-child">
+                    <a href="/" class="menu-link">
+                        <img class="menu-img" src="img/menu-spa.jpg" alt="パスタの画像です">
+                        <p class="menu-text">スパゲッティの説明が入ります。</p>
+                    </a>
                 </li>
-                <li>
-                    <img src="img/menu-waffulu.jpg" alt="ワッフルの画像です">
-                    <p>ワッフルの説明が入ります</p>
+                <li class="menu-flex-child">
+                    <a href="/" class="menu-link">
+                        <img class="menu-img" src="img/menu-waffulu.jpg" alt="ワッフルの画像です">
+                        <p class="menu-text">ワッフルの説明が入ります</p>
+                    </a>
                 </li>
             </ul>
 
@@ -125,20 +137,20 @@
         <div class="container">
             <div class="title-width">
                 <h2 class="section-title">Access</h2>
-                <p>交通アクセス</p>
+                <p class="section-sub-title">交通アクセス</p>
             </div>
 
             <div class="access-flex">
 
                 <div class="access-left">
-                    <p>店舗名：steady Cafe (ステディー カフェ)</p>
-                    <p>所在地：〒105-0011<br>
+                    <p class="access-text">店舗名：steady Cafe (ステディー カフェ)</p>
+                    <p class="access-text">所在地：〒105-0011<br>
                         東京都港区芝公園4丁目2-8</p>
-                    <p>アクセス：都営地下鉄大江戸線「赤羽橋」駅より徒歩5分です。</p>
-                    <p>TEL：03-3433-5111<br>
+                    <p class="access-text">アクセス：都営地下鉄大江戸線「赤羽橋」駅より徒歩5分です。</p>
+                    <p class="access-text">TEL：03-3433-5111<br>
                         (ホームページを見たとお伝えいただけるとスムーズです。)</p>
-                    <p>営業時間：10：30～21：00（L.O.20：30）</p>
-                    <p>定休日：火曜日＋不定休で月に1日<br>
+                    <p class="access-text">営業時間：10：30～21：00（L.O.20：30）</p>
+                    <p class="access-text">定休日：火曜日＋不定休で月に1日<br>
                         ※ご来店時は営業予定のご確認を宜しくお願いします。</p>
                 </div>
                 <div class="access-right">
@@ -157,42 +169,42 @@
         <div class="container">
             <div class="title-width">
                 <h2 class="section-title">Blog</h2>
-                <p>お知らせ</p>
+                <p class="section-sub-title">お知らせ</p>
             </div>
 
 
             <ul class="blog-flex" id="blog">
-                <li>
+                <li class="blog-child">
                     <!--今回は1ページなので割愛-->
-                    <a href="#">
-                        <img src="img/blog-image1.jpg" alt="パンケーキの画像です">
-                        <p class=blog-date>2021.09.11 (Sat)</p>
+                    <a class="blog-link" href="#">
+                        <img class="blog-img" src="img/blog-image1.jpg" alt="パンケーキの画像です">
+                        <p class="blog-date">2021.09.11 (Sat)</p>
                         <p class="blog-title">新メニューのご紹介！</p>
                         <div class="blog-text">
-                            <p>来週9/18(土)にて新商品『ラズベリーパンケーキ』を新発売します。</p>
+                            <p class="blog-sub-text">来週9/18(土)にて新商品『ラズベリーパンケーキ』を新発売します。</p>
                         </div>
                     </a>
                 </li>
-                <li>
+                <li class="blog-child">
                     <!--今回は1ページなので割愛-->
-                    <a href="#">
-                        <img src="img/blog-image2.jpg" alt="チキンの画像です">
-                        <p class=blog-date>2021.09.09　(Thu)</p>
+                    <a class="blog-link" href="#">
+                        <img class="blog-img" src="img/blog-image2.jpg" alt="チキンの画像です">
+                        <p class="blog-date">2021.09.09　(Thu)</p>
                         <p class="blog-title">当店のチキンは『ここ』が違う！</p>
                         <div class="blog-text">
-                            <p>こんにちは！オーナーの○○です。<br>
+                            <p class="blog-sub-text">こんにちは！オーナーの○○です。<br>
                                 本日は当店のチキンが何故美味しいのかを語っていきます。</p>
                         </div>
                     </a>
                 </li>
-                <li>
+                <li class="blog-child">
                     <!--今回は1ページなので割愛-->
-                    <a href="#">
-                        <img src="img/blog-image3.jpg" alt="チョコケーキの画像です">
-                        <p class=blog-date>2021.09.03　(Fri)</p>
+                    <a class="blog-link" href="#">
+                        <img class="blog-img" src="img/blog-image3.jpg" alt="チョコケーキの画像です">
+                        <p class="blog-date">2021.09.03　(Fri)</p>
                         <p class="blog-title">オープニングセレモニー</p>
                         <div class="blog-text">
-                            <p>ブログを見て頂きまして、ありがとうございます！<br>
+                            <p class="blog-sub-text">ブログを見て頂きまして、ありがとうございます！<br>
                                 本日は当店が作られた歴史を簡単に説明をしていきます。</p>
                         </div>
                     </a>
@@ -203,7 +215,7 @@
 
     <footer>
         <div class="footer">
-            <p><span>©</span> 2021.9.11 Steady Cafe</p>
+            <p class="footer-title"><span class="copy-right">©</span>Steady Cafe</p>
         </div>
 
     </footer>

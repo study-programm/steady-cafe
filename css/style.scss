@@ -1,10 +1,10 @@
 /*------------column--------------*/
 
-$main-Color:#835820;
-$header-Color:#ffffff;
-$dots-Color:#E1CCAB;
-$tea-Color:#f5deb3;
-$milk-tea-Color:#e8d3ca;
+$main-color:#835820;
+$header-color:#ffffff;
+$dots-color:#E1CCAB;
+$tea-color:#f5deb3;
+$milk-tea-color:#e8d3ca;
 
 * {
     box-sizing: border-box;
@@ -13,7 +13,7 @@ $milk-tea-Color:#e8d3ca;
 body {
     letter-spacing: 0.05em;
     font-size: 16px;
-    color: $main-Color;
+    color: $main-color;
     font-family: 'Caveat', cursive;
     letter-spacing: 2px;
 }
@@ -23,10 +23,9 @@ span {
 }
 
 
-
 /*ヘッダーの背景を変えるCSS　※高さ計測して出す仕組みは別途JSで記入。*/
 .changes {
-    background: $milk-tea-Color;
+    background: $milk-tea-color;
     transition: all 1s;
 }
 
@@ -41,20 +40,19 @@ span {
     width: 85px;
     height: 85px;
     border-radius: 25%;
-    background: $milk-tea-Color;
+    background: $milk-tea-color;
     cursor: pointer;
     text-align: center;
     font-size: 16px;
-    color: $header-Color;
+    color: $header-color;
 
-
-    span {
+    .scroll-btn {
         position: relative;
         top: 40%
     }
 
     &:hover {
-        color: $main-Color;
+        color: $main-color;
         transition: all 0.5s;
     }
 
@@ -77,35 +75,34 @@ header {
     z-index: 200;
     transition: all 1s;
 
-    h1 {
-        color: $header-Color;
+    .title-logo {
+        color: $header-color;
         font-size: 26px;
     }
-
 
     .header-flex {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        h1 {
+        .title-logo {
             padding-left: 20px;
         }
 
-        ul {
+        .nav-ul {
             display: flex;
 
 
-            li {
+            .nav-li {
                 padding: 0 20px;
 
-                a {
-                    color: $header-Color;
+                .header-link {
+                    color: $header-color;
                     font-size: 18px;
 
                     &:hover {
 
-                        color: $main-Color;
+                        color: $main-color;
                         opacity: 0.8;
                         transition: all .5s;
                     }
@@ -121,24 +118,24 @@ header {
             z-index: 20;
             display: none;
 
-            span {
+            .hamburger {
                 width: 30px;
                 height: 2px;
                 display: block;
-                background: $header-Color;
+                background: $header-color;
                 position: absolute;
                 transition: all 0.5s;
             }
 
-            span:nth-child(1) {
+            .hamburger:nth-child(1) {
                 top: 4px;
             }
 
-            span:nth-child(2) {
+            .hamburger:nth-child(2) {
                 top: 14px;
             }
 
-            span:nth-child(3) {
+            .hamburger:nth-child(3) {
                 bottom: 4px;
             }
 
@@ -158,20 +155,20 @@ header {
 
 //open処理は別にさばく　open一覧部分　
 
-.open .toggle-btn span {
+.open .toggle-btn .hamburger {
     transition: all 0.5s;
 }
 
-.open .toggle-btn span:nth-child(1) {
+.open .toggle-btn .hamburger:nth-child(1) {
     -webkit-transform: translateY(10px) rotate(-315deg);
     transform: translateY(10px) rotate(-315deg);
 }
 
-.open .toggle-btn span:nth-child(2) {
+.open .toggle-btn .hamburger:nth-child(2) {
     opacity: 0;
 }
 
-.open .toggle-btn span:nth-child(3) {
+.open .toggle-btn .hamburger:nth-child(3) {
     -webkit-transform: translateY(-10px) rotate(315deg);
     transform: translateY(-10px) rotate(315deg);
 }
@@ -181,7 +178,7 @@ header .header-flex.open .mask {
     display: block;
     transition: all 0.5s;
     //カフェをイメージして全体をミルクティにイメージした色。
-    background-color: $milk-tea-Color;
+    background-color: $milk-tea-color;
     opacity: 0.9;
     position: fixed;
     top: 0;
@@ -202,7 +199,7 @@ header .header-flex.open .mask {
 
     //見栄えの強弱を意識して幅いっぱいに作る。
     //高さは最大でもPCのファーストビューまで。
-    img {
+    .slide-img {
         width: 100%;
         height: 700px;
         object-fit: cover;
@@ -210,12 +207,12 @@ header .header-flex.open .mask {
 
 }
 
-.slide-title h2 {
+.slide-title .slide-heading {
     font-size: 45px;
     position: absolute;
     top: 50%;
     left: 10%;
-    color: $header-Color;
+    color: $header-color;
     line-height: 75px;
     letter-spacing: 5px;
     z-index: 110;
@@ -228,6 +225,7 @@ header .header-flex.open .mask {
 
     //セクション区切りで100離す
     padding: 100px 0;
+    background: $header-color;
 
     .title-width {
         text-align: center;
@@ -239,7 +237,7 @@ header .header-flex.open .mask {
             letter-spacing: 3px;
         }
 
-        p {
+        .section-sub-title {
             font-family: 'Caveat', cursive;
             margin-top: 10px;
         }
@@ -254,7 +252,7 @@ header .header-flex.open .mask {
     .about-left {
         width: 35%;
 
-        img {
+        .about-img {
             width: 100%;
         }
     }
@@ -272,19 +270,19 @@ header .header-flex.open .mask {
 
 .menu-wrapper {
     padding: 100px 0;
-    color: white;
+    color: $header-color;
 
     &::before {
         content: "";
         display: block;
         background-image: url("../img/menu-bgi.jpg");
         position: fixed;
-        top:0;
+        top: 0;
         background-position: center;
         background-size: cover;
-        width:100%;
-        height:100%;
-        z-index:-1;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
     }
 
     .title-width {
@@ -298,7 +296,7 @@ header .header-flex.open .mask {
 
         }
 
-        p {
+        .section-sub-title {
             font-family: 'Caveat', cursive;
             margin-top: 10px;
         }
@@ -313,37 +311,42 @@ header .header-flex.open .mask {
         padding-bottom: 50px;
 
 
-        li {
+        .menu-flex-child {
             width: 30%;
             transition: all 0.5s;
             padding-bottom: 20px;
             border-radius: 10px;
             margin-bottom: 50px;
             box-shadow: 0 0 3px 0 rgba(0, 0, 0, ), 0 2px 3px 0 rgba(0, 0, 0, .12);
-            transition: .3s;
+            transition: 0.3s;
 
             &:hover {
-
-                color: #000;
                 transition: all 0.5s;
                 box-shadow: 0 15px 30px -5px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1);
                 transform: translateY(-4px);
             }
 
-            &+p {
+            .menu-link {
+                color: $header-color;
+
+                &:hover {
+                    color: #000;
+                    transition: all 0.3s;
+                }
+
+            }
+
+            .menu-link+.menu-text:hover {
                 color: #000;
             }
 
 
-
-            img {
+            .menu-img {
                 border-radius: 50px;
                 width: 100%;
-                cursor: pointer;
-
             }
 
-            p {
+            .menu-text {
                 font-family: 'Caveat', cursive;
                 margin-top: 20px;
             }
@@ -355,11 +358,11 @@ header .header-flex.open .mask {
     .disabled {
         text-align: center;
         padding: 20px 30px;
-        background: $milk-tea-Color;
+        background: $milk-tea-color;
         width: 200px;
         margin: 0 auto;
         border-radius: 25px;
-        color: $header-Color;
+        color: $header-color;
         box-shadow: 0 5px #faf0e6;
         transform: translateY(-6px);
         cursor: pointer;
@@ -377,6 +380,7 @@ header .header-flex.open .mask {
 .access-wrapper {
 
     padding: 100px 0;
+    background: $header-color;
 
     .title-width {
         text-align: center;
@@ -386,11 +390,9 @@ header .header-flex.open .mask {
             font-size: 65px;
             font-family: 'Allison', cursive;
             letter-spacing: 3px;
-
-
         }
 
-        p {
+        .section-sub-title {
             font-family: 'Caveat', cursive;
             margin-top: 10px;
         }
@@ -404,9 +406,9 @@ header .header-flex.open .mask {
         .access-left {
             width: 50%;
 
-            p {
+            .access-text {
                 line-height: 34px;
-                border-bottom: 2px dotted $dots-Color;
+                border-bottom: 2px dotted $dots-color;
                 padding-bottom: 5px;
                 margin-bottom: 10px;
             }
@@ -429,12 +431,20 @@ header .header-flex.open .mask {
 //ブログ一覧
 .blog-wrapper {
     padding: 100px 0;
-    background-image: url("../img/blog-bgi.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    color: $header-Color;
+    color: $header-color;
 
+    &::before {
+        content: "";
+        display: block;
+        background-image: url("../img/blog-bgi.jpg");
+        position: fixed;
+        top: 0;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
 
     .title-width {
         text-align: center;
@@ -448,31 +458,29 @@ header .header-flex.open .mask {
         }
 
 
-        p {
+        .section-sub-title {
             font-family: 'Caveat', cursive;
             margin-top: 20px;
         }
 
     }
 
-
-
     .blog-flex {
         display: flex;
         justify-content: space-between;
     }
 
-    li {
+    .blog-child {
         width: 32%;
 
 
-        a {
+        .blog-link {
             transition: all 0.5s;
-            color: $header-Color;
+            color: $header-color;
             opacity: 0.8;
         }
 
-        a:hover {
+        .blog-link:hover {
             opacity: 1;
             transition: all 0.5s;
         }
@@ -485,19 +493,16 @@ header .header-flex.open .mask {
             margin-top: 15px;
             font-size: 17px;
             letter-spacing: 3.5px;
+            text-align: center;
         }
 
         .blog-title {
             font-size: 14px;
             margin-top: 10px;
-        }
-
-        p {
             text-align: center;
-
         }
 
-        img {
+        .blog-img {
             width: 100%;
             height: 250px;
 
@@ -507,7 +512,7 @@ header .header-flex.open .mask {
 
             margin-top: 30px;
 
-            p {
+            .blog-sub-text {
                 text-align: left;
                 letter-spacing: 2px;
                 line-height: 24px;
@@ -524,14 +529,14 @@ header .header-flex.open .mask {
 .footer {
 
     padding-bottom: 30px;
-    background: $milk-tea-Color;
+    background: $milk-tea-color;
 
-    p {
+    .footer-title {
         text-align: center;
         padding-top: 30px;
         font-size: 14px;
 
-        span {
+        .copy-right {
             font-family: sans-serif;
         }
     }
