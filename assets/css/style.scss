@@ -474,15 +474,9 @@ header .header-flex.open .mask {
 
 
         .blog-link {
-            transition: all 0.5s;
             color: $main-color;
-            opacity: 0.8;
         }
 
-        .blog-link:hover {
-            opacity: 1;
-            transition: all 0.5s;
-        }
 
         &:hover {
             cursor: pointer;

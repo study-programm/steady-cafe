@@ -417,12 +417,6 @@ header .header-flex.open .mask {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: #835820;
-  opacity: 0.8;
-}
-.blog-wrapper .blog-child .blog-link:hover {
-  opacity: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 .blog-wrapper .blog-child:hover {
   cursor: pointer;
