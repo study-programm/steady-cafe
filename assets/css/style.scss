@@ -200,7 +200,7 @@ header .header-flex.open .mask {
     //高さは最大でもPCのファーストビューまで。
     .slide-img {
         width: 100%;
-        height: 700px;
+        max-height: 700px;
         object-fit: cover;
     }
 

@@ -170,7 +170,7 @@ header .header-flex.open .mask {
 }
 .slider-show .slide-img {
   width: 100%;
-  height: 700px;
+  max-height: 700px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -414,8 +414,6 @@ header .header-flex.open .mask {
   width: 32%;
 }
 .blog-wrapper .blog-child .blog-link {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
   color: #835820;
 }
 .blog-wrapper .blog-child:hover {

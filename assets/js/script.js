@@ -71,9 +71,12 @@ $(function(){
     
     //画像画面超えた時にスクロールしたら背景を出す
     
+    //スライダーの高さをjSで取得
+    let slider=$(".slide-img").height();
+    
     $(window).scroll(function(){
         
-        if($(this).scrollTop()>650){
+        if($(this).scrollTop()>slider){
             $("header").addClass("changes");
         }else{
             $("header").removeClass("changes");
