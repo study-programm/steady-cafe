@@ -72,18 +72,24 @@ $(function(){
     //スライダー画面超えた時にスクロールしたら背景を出す
 
 
-    //スライダーの高さを取得
-    let sliderHeight=$(".slide-img").height();
-
-    $(window).scroll(function(){
-
-    //（PC向けに数字指定だとスマホの指定の時にずれる為、JSで高さ取得）
+    //しっかり手順をメモする。
+    // 1 PC画面で見た時に幅ごとに対応させないといけないので、
+    //
+    //
+    //前準備として画面の幅が変わったら、slide-imgの高さを取得し直してPC画面に反映したときにも対応させる
+    
+    
+    $(window).on('scroll resize',function(){
+        
+        let sliderHeight=$(".slide-img").height();
+        //ページトップからスライダーの高さを超えた場合changesクラスを与える。
         if($(this).scrollTop()>sliderHeight){
             $("header").addClass("changes");
-    //違った場合に元の色に戻す処理を加えてあげる。        
+    //slide-imgの高さを超えなかったchnagesクラスを外す処理を加えてあげる。        
         }else{
             $("header").removeClass("changes");
         }
+
     });
 
     //ナビゲーションをクリックしたらゆっくりその場までスクロールする
@@ -107,9 +113,8 @@ $(function(){
 
 
     });
-
-
     
+
     //ヘッダーと同じ統一感を出すために、同じ高さになった時にボタンを出してあげる
     
     let scrollTop=$("#scrollTop");

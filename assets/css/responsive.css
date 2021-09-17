@@ -12,9 +12,9 @@
         font-size: 30px;
     }
 
-    .slider .slider-show .slider-child .slide-img {
-        height: 550px;
-    }
+    /* .slider .slider-show .slider-child .slide-img {
+        max-height: 550px;
+    } */
 
     /*アバウトページ*/
 
@@ -159,7 +159,7 @@
 
     /*スライダー画像周り*/
     .slider .slider-show .slider-child .slide-img {
-        height: 340px;
+        max-height: 340px;
     }
 
     .slider .slide-title .slide-heading {
