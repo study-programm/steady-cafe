@@ -69,19 +69,24 @@ $(function(){
     });
 
     
-    //画像画面超えた時にスクロールしたら背景を出す
+    //画像画面超えた時にスクロールしたら背景を出す処理
     
-    //スライダーの高さをjSで取得
-    let slider=$(".slide-img").height();
+    //スライダーをHYMLから取得→スライダーの外までの高さをJSで取得する
+    let sliderImg=document.getElementsByClassName("slider-img");
+
+    let sliderHeight=sliderImg.offsetHeight;
+
     
+    //スクロール量でスライダーの高さを超えたらヘッダーに色を付ける。
     $(window).scroll(function(){
-        
-        if($(this).scrollTop()>slider){
-            $("header").addClass("changes");
+
+    //（PC向けに数字指定だとスマホの指定の時にずれる為、JSで高さ取得。）
+        if($(this).scrollTop()<sliderHeight){
+            $(".header").addClass("change");
+    //違った場合に元の色に戻す処理を加えてあげる。        
         }else{
-            $("header").removeClass("changes");
+            $(".header").removeClass("chnage");
         }
-        
     });
 
     //ナビゲーションをクリックしたらゆっくりその場までスクロールする
