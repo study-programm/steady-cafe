@@ -22,7 +22,7 @@ body {
 /*ヘッダーの背景を変えるCSS　※高さ計測して出す仕組みは別途JSで記入。*/
 .changes {
     background: $milk-tea-color;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 /*トップページに戻るボタンの色付け*/
@@ -69,7 +69,7 @@ header {
     top: 0;
     left: 0;
     z-index: 200;
-    transition: all 1s;
+    transition: all 0.5s;
 
     .title-logo {
         color: $header-color;
