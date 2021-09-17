@@ -79,7 +79,7 @@ $(function(){
     //前準備として画面の幅が変わったら、slide-imgの高さを取得し直してPC画面に反映したときにも対応させる
     
     
-    $(window).on('scroll resize',function(){
+    $(window).on('load scroll resize',function(){
         
         let sliderHeight=$(".slide-img").height();
         //ページトップからスライダーの高さを超えた場合changesクラスを与える。
