@@ -69,30 +69,14 @@ $(function(){
     });
 
     
-    //画像画面超えた時にスクロールしたら背景を出す
-    
-    //スライダーの高さをjSで取得
-    // let slider=$(".slide-img").height();
-    
-    // $(window).scroll(function(){
-        
-    //     if($(this).scrollTop()>slider){
-    //         $("header").addClass("changes");
-    //     }else{
-    //         $("header").removeClass("changes");
-    //     }
-        
-    // });
+    //スライダー画面超えた時にスクロールしたら背景を出す
 
-    //
-    
 
     //スライダーの高さを取得
     let sliderHeight=$(".slide-img").height();
 
     $(window).scroll(function(){
 
-    //スライダーの高さを超えたらヘッダーに色を付ける。
     //（PC向けに数字指定だとスマホの指定の時にずれる為、JSで高さ取得）
         if($(this).scrollTop()>sliderHeight){
             $("header").addClass("changes");
