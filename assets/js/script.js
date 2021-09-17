@@ -69,23 +69,36 @@ $(function(){
     });
 
     
-    //画像画面超えた時にスクロールしたら背景を出す処理
+    //画像画面超えた時にスクロールしたら背景を出す
     
-    //スライダーをHYMLから取得→スライダーの外までの高さをJSで取得する
-    let sliderImg=document.getElementsByClassName("slider-img");
-
-    let sliderHeight=sliderImg.offsetHeight;
-
+    //スライダーの高さをjSで取得
+    // let slider=$(".slide-img").height();
     
-    //スクロール量でスライダーの高さを超えたらヘッダーに色を付ける。
+    // $(window).scroll(function(){
+        
+    //     if($(this).scrollTop()>slider){
+    //         $("header").addClass("changes");
+    //     }else{
+    //         $("header").removeClass("changes");
+    //     }
+        
+    // });
+
+    //
+    
+
+    //スライダーの高さを取得
+    let sliderHeight=$(".slide-img").height();
+
     $(window).scroll(function(){
 
-    //（PC向けに数字指定だとスマホの指定の時にずれる為、JSで高さ取得。）
-        if($(this).scrollTop()<sliderHeight){
-            $(".header").addClass("change");
+    //スライダーの高さを超えたらヘッダーに色を付ける。
+    //（PC向けに数字指定だとスマホの指定の時にずれる為、JSで高さ取得）
+        if($(this).scrollTop()>sliderHeight){
+            $("header").addClass("changes");
     //違った場合に元の色に戻す処理を加えてあげる。        
         }else{
-            $(".header").removeClass("chnage");
+            $("header").removeClass("changes");
         }
     });
 

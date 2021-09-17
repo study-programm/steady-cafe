@@ -12,6 +12,10 @@
         font-size: 30px;
     }
 
+    .slider .slider-show .slider-child .slide-img {
+        height: 550px;
+    }
+
     /*アバウトページ*/
 
     .about-wrapper .container .about-flex {
@@ -155,7 +159,7 @@
 
     /*スライダー画像周り*/
     .slider .slider-show .slider-child .slide-img {
-        height: 350px;
+        height: 340px;
     }
 
     .slider .slide-title .slide-heading {
