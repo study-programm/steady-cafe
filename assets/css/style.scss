@@ -12,12 +12,11 @@ $milk-tea-color:#e8d3ca;
 
 body {
     letter-spacing: 0.05em;
-    font-size: 16px;
+    font-size: 17px;
     color: $main-color;
     font-family: 'Caveat', cursive;
     letter-spacing: 2px;
 }
-
 
 /*ヘッダーの背景を変えるCSS　※高さ計測して出す仕組みは別途JSで記入。*/
 .changes {
@@ -26,15 +25,13 @@ body {
 }
 
 /*トップページに戻るボタンの色付け*/
-
-
 #scrollTop {
     display: inline-block;
     position: fixed;
     bottom: 10%;
     right: 5%;
-    width: 85px;
-    height: 85px;
+    width: 50px;
+    height: 50px;
     border-radius: 25%;
     background: $milk-tea-color;
     cursor: pointer;
@@ -114,7 +111,7 @@ header {
             display: none;
 
             &:hover {
-                cursor: pointer;
+                cursor: pointeer;
             }
 
             .hamburger {
@@ -299,7 +296,6 @@ header .header-flex.open .mask {
         flex-wrap: wrap;
         justify-content: space-between;
         padding-bottom: 50px;
-
 
         .menu-flex-child {
             width: 30%;

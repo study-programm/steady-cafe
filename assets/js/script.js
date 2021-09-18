@@ -1,74 +1,74 @@
 
 //ハンバーガー開閉処理
-$(function(){
+$(function () {
 
-    $(".toggle-btn").click(function(){
+    $(".toggle-btn").click(function () {
 
-        if($(".header-flex").hasClass("open")){
+        if ($(".header-flex").hasClass("open")) {
 
             $(".header-flex").removeClass("open");
-        }else{
+        } else {
             $(".header-flex").addClass("open");
         }
 
     });
 
-    
-    
-//背景を押すと、ハンバーガーの開きと背景を元に戻す。
-    
-    $(".mask").click(function(){   
-            
-            $(".header-flex").removeClass("open"); 
 
-        
-    });
-    
-//パソコンでハンバーガークリックしてそのまま広げた時に
-//背景だけが残るのでそれの処理を距離を測って行う
 
-    $(window).on('load resize', function(){
-        
-        //幅を取得
-    var $win=$(window).width();
-    
-    var $smart=575;
+    //背景を押すと、ハンバーガーの開きと背景を元に戻す。
 
-    //575px以上の時に背景含めたopen解除（戻ってみた時に通常の状態に見えるようにする）
-    //それ未満は何もしない。
-    
-    if($smart <= $win){
+    $(".mask").click(function () {
 
-        //1:ハンバーガーが開いている部分を解除
-        //2:背景を解除
         $(".header-flex").removeClass("open");
-        $(".mask").removeClass("open");
-    
-    }else{
-        ; //何もしない
+
+
+    });
+
+    //パソコンでハンバーガークリックしてそのまま広げた時に
+    //背景だけが残るのでそれの処理を距離を測って行う
+
+    $(window).on('load resize', function () {
+
+        //幅を取得
+        var $win = $(window).width();
+
+        var $smart = 575;
+
+        //575px以上の時に背景含めたopen解除（戻ってみた時に通常の状態に見えるようにする）
+        //それ未満は何もしない。
+
+        if ($smart <= $win) {
+
+            //1:ハンバーガーが開いている部分を解除
+            //2:背景を解除
+            $(".header-flex").removeClass("open");
+            $(".mask").removeClass("open");
+
+        } else {
+            ; //何もしない
         }
     });
 
     //ハンバーガーメニュー開いた後にクリックしたら背景とボタンを元に戻して見えるようにする
 
-    $(".header-link").click(function(){
+    $(".header-link").click(function () {
 
         $(".header-flex").removeClass("open");
-        
+
     });
 
 
     //トップのスリックスライダーの処理。
 
     $(".slider-show").slick({
-            autoplay:true,
-            autoplaySpeed:6000,
-            Speed:3000,
-            arrows: false,
-            fade:true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        Speed: 3000,
+        arrows: false,
+        fade: true,
     });
 
-    
+
     //スライダー画面超えた時にスクロールしたら背景を出す
 
 
@@ -85,16 +85,16 @@ $(function(){
     //onは複数のメソッドを使うときに使う
 
     //1
-    $(window).on('load scroll resize',function(){
-        
+    $(window).on('load scroll resize', function () {
+
 
         //2
-        let sliderHeight=$(".slide-img").height();
+        let sliderHeight = $(".slide-img").height();
         //ページトップからスライダーの高さを超えた場合changesクラスを与える。
-        if($(this).scrollTop()>sliderHeight){
+        if ($(this).scrollTop() > sliderHeight) {
             $("header").addClass("changes");
-    //slide-imgの高さを超えなかったchnagesクラスを外す処理を加えてあげる。        
-        }else{
+            //slide-imgの高さを超えなかったchnagesクラスを外す処理を加えてあげる。        
+        } else {
             $("header").removeClass("changes");
         }
 
@@ -102,57 +102,57 @@ $(function(){
 
     //ナビゲーションをクリックしたらゆっくりその場までスクロールする
 
-    $(".header-link").click(function(){
+    $(".header-link").click(function () {
 
         //リンクを取得させる
-        let link=$(this).attr("href");
+        let link = $(this).attr("href");
 
         //移動先のポジション取得
-        let target=$(link=="#"|| link==""? html:link);
+        let target = $(link == "#" || link == "" ? html : link);
 
         //到達地点を数値で取得
-        let position=target.offset().top;
+        let position = target.offset().top;
 
         $("html,body").animate({
 
-            scrollTop:position
+            scrollTop: position
 
-        },1200);
+        }, 1200);
 
 
     });
-    
+
 
     //ヘッダーと同じ統一感を出すために、同じ高さになった時にボタンを出してあげる
-    
-    let scrollTop=$("#scrollTop");
-    
+
+    let scrollTop = $("#scrollTop");
+
     //初期はボタンを隠す
     scrollTop.hide();
 
-    $(window).scroll(function(){
-        
-        if($(this).scrollTop()>650){
+    $(window).scroll(function () {
+
+        if ($(this).scrollTop() > 650) {
             scrollTop.fadeIn();
-        }else{
+        } else {
             scrollTop.fadeOut();
         }
-        
+
     });
-    
-    
+
+
     //スクロールしたらTOPページにゆっくり戻る処理
-    
-    $("#scrollTop").click(function(){
+
+    $("#scrollTop").click(function () {
 
         $("html,body").animate({
 
-            scrollTop:0
-            
-        },1200);
+            scrollTop: 0
+
+        }, 1200);
 
     });
-    
+
 
 
 });
